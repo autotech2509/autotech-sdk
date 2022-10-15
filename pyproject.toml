@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "autotech-sdk"
-version = "1.2.5"
+version = "1.0.1"
 description = "Library for neccessary tools for autotech company"
 readme = "README.md"
 authors = [{ name = "Autotech2509", email = "autotech2509@gmail.com" }]
@@ -32,6 +32,7 @@ dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
 Homepage = "https://github.com/autotech2509/autotech-sdk"
+
 
 [tool.bumpver]
 current_version = "2022.1001-alpha"
