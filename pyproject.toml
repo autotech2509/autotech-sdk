@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "autotech-sdk"
-version = "1.0.1"
+version = "1.0.2"
 description = "Library for neccessary tools for autotech company"
 readme = "README.md"
 authors = [{ name = "Autotech2509", email = "autotech2509@gmail.com" }]

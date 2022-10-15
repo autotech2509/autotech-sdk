@@ -1,2 +1,2 @@
-from database import *
-from kafka import *
+from .database import *
+from .kafka import *
