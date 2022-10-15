@@ -9,7 +9,7 @@ name = "autotech-sdk"
 version = "1.2.5"
 description = "Library for neccessary tools for autotech company"
 readme = "README.md"
-authors = [{ name = "Hieucaohd", email = "hieucaohd@gmail.com" }]
+authors = [{ name = "Autotech2509", email = "autotech2509@gmail.com" }]
 license = { file = "LICENSE" }
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -18,20 +18,20 @@ classifiers = [
 ]
 keywords = ["sdk", "autotech"]
 dependencies = [
-    "pymongo",
-    "requests",
-    "certifi",
-    "confluent-kafka[avro,json,protobuf]",
-    "Flask",
+    "pymongo == 4.2.0",
+    "requests == 2.28.1",
+    "certifi == 2022.9.24",
+    "confluent-kafka[avro,json,protobuf] >= 1.4.2",
+    "Flask == 2.1.2",
     'tomli; python_version < "3.11"',
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 
 [project.optional-dependencies]
 dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
-Homepage = "https://github.com/Hieucaohd/transform-data-schema"
+Homepage = "https://github.com/autotech2509/autotech-sdk"
 
 [tool.bumpver]
 current_version = "2022.1001-alpha"
