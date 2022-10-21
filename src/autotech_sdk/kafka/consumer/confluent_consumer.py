@@ -4,6 +4,8 @@ from confluent_kafka import Consumer
 import json
 from abc import ABCMeta, abstractmethod
 from typing import List
+from dataclasses import dataclass
+from dacite import from_dict
 
 from ..common.kafka_config import BaseConfig
 
@@ -33,8 +35,12 @@ class ConfluentConsumerConfig(BaseConfig):
 
 
 class ConfluentConsumer(metaclass=ABCMeta):
+    class Meta:
+        message_type = dict
+
     def __init__(self, config: ConfluentConsumerConfig, topic: List[str] or str):
         self.config = config
+        self._meta = self.Meta
         consumer = Consumer(self.config.get_config())
         self.consumer = consumer
 
@@ -61,6 +67,12 @@ class ConfluentConsumer(metaclass=ABCMeta):
                 else:
                     record_value = msg.value()
                     data = json.loads(record_value)
+
+                    if self._meta.message_type != dict:
+                        try:
+                            data = from_dict(self._meta.message_type, data)
+                        except Exception as er:
+                            pass
                     self.process_data(data)
         except KeyboardInterrupt:
             pass

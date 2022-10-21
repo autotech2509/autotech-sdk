@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "autotech-sdk"
-version = "1.0.2"
+version = "1.0.3"
 description = "Library for neccessary tools for autotech company"
 readme = "README.md"
 authors = [{ name = "Autotech2509", email = "autotech2509@gmail.com" }]
@@ -23,6 +23,7 @@ dependencies = [
     "certifi == 2022.9.24",
     "confluent-kafka[avro,json,protobuf] >= 1.4.2",
     "Flask == 2.1.2",
+    "dacite == 1.6.0",
     'tomli; python_version < "3.11"',
 ]
 requires-python = ">=3.9"

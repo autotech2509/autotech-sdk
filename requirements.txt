@@ -20,6 +20,8 @@ colorama==0.4.5
     # via click
 confluent-kafka[avro,json,protobuf]==1.9.2
     # via autotech-sdk (pyproject.toml)
+dacite==1.6.0
+    # via autotech-sdk (pyproject.toml)
 fastavro==1.6.1
     # via confluent-kafka
 flask==2.1.2
