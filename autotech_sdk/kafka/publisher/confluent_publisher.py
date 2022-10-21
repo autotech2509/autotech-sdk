@@ -4,8 +4,8 @@ from dataclasses import dataclass
 from confluent_kafka import Producer
 import json
 
-from ..common import confluent_ccloud_lib as ccloud_lib
-from ..common.kafka_config import BaseConfig
+from autotech_sdk.kafka.common import confluent_ccloud_lib as ccloud_lib
+from autotech_sdk.kafka.common.kafka_config import BaseConfig
 
 
 @dataclass

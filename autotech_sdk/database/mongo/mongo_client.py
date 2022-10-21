@@ -4,7 +4,7 @@ import copy
 
 from pymongo.database import Database
 
-from .mongo_config import MongoConfig
+from autotech_sdk.database.mongo.mongo_config import MongoConfig
 
 global_mongodb_client: MongoClient = None
 global_mongo_config: MongoConfig = None

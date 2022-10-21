@@ -1,4 +1,4 @@
-from .setup_collection import register_collection
+from autotech_sdk.database.mongo.setup_collection import register_collection
 
 
 class BaseModelMeta(type):

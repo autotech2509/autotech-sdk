@@ -3,7 +3,7 @@ import typing
 from pymongo import ReadPreference
 from pymongo.database import Database
 
-from .mongo_client import MongoDBInit
+from autotech_sdk.database.mongo.mongo_client import MongoDBInit
 
 
 models: typing.List = []

@@ -2,8 +2,8 @@ import typing
 
 from pymongo import IndexModel
 
-from .index_create import create_mongo_indexes
-from .base_model_meta import BaseModelMeta
+from autotech_sdk.database.mongo.index_create import create_mongo_indexes
+from autotech_sdk.database.mongo.base_model_meta import BaseModelMeta
 from pymongo.collection import Collection
 
 

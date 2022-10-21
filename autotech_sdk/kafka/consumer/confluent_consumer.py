@@ -1,5 +1,3 @@
-from dataclasses import dataclass
-
 from confluent_kafka import Consumer
 import json
 from abc import ABCMeta, abstractmethod
@@ -7,7 +5,7 @@ from typing import List
 from dataclasses import dataclass
 from dacite import from_dict
 
-from ..common.kafka_config import BaseConfig
+from autotech_sdk.kafka.common.kafka_config import BaseConfig
 
 
 @dataclass
@@ -69,8 +67,9 @@ class ConfluentConsumer(metaclass=ABCMeta):
                     data = json.loads(record_value)
 
                     if self._meta.message_type != dict:
+                        message_type = self._meta.message_type
                         try:
-                            data = from_dict(self._meta.message_type, data)
+                            data: message_type = from_dict(message_type, data)
                         except Exception as er:
                             pass
                     self.process_data(data)
